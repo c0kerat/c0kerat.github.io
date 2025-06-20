@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: rgb(22, 23, 24);
+}
+html {
+    border: 6px solid rgb(36, 36, 36);
+}
+
+#heart {
+    transition: 0.3s;
+}
+
+#heart:hover {
+    filter: drop-shadow(2px 2px 10px red);
+}
+
+.toggle-heart {
+    filter: drop-shadow(2px 2px 10px red);
+    animation: heartbeat 1.5s infinite alternate;
+}
+
+.love-text {
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(212, 212, 212);
+    text-align: center;
+    font-size: 20px;
+    display: none;
+    opacity: 0;
+}
+#love-text2 {
+    font-size: 16px;
+    color: rgb(156, 156, 156);
+}
+
+.toggle-love-text {
+    animation: fadein 2.5s;
+    opacity: 1; 
+}
+
+.text-holder {
+    width: 400px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
